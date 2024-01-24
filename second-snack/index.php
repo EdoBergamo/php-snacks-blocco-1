@@ -13,7 +13,7 @@
     $age = $_GET['age'];
 
     if (strlen($name) > 3 && filter_var($mail, FILTER_VALIDATE_EMAIL) && is_numeric($age)) {
-      echo "Accesso Consentito";
+      echo "Accesso Riuscito";
     } else {
       echo "Accesso Negato";
     }
@@ -25,15 +25,15 @@
   <!-- Form -->
   <form method="get">
     <label for="name">Nome</label>
-    <input type="text" name="name" />
+    <input type="text" name="name" required />
     <br>
 
     <label for="mail">Email</label>
-    <input type="email" name="mail" />
+    <input type="email" name="mail" required />
     <br>
 
     <label for="age">Età</label>
-    <input type="text" name="age" />
+    <input type="text" name="age" required />
     <br>
 
     <input type="submit" value="Accedi" />
